@@ -62,7 +62,7 @@ Spring Boot는 Spring framework와 몇 가지면에서 차이가 있다.
 
 스프링부트는 스프링을 더 쉽게 이용하기 위한 도구라고 볼 수 있다. 스프링을 사용할 때 이것저것 세팅을 해야 될 요소가 너무 많아 불편함이 있었는데 스프링부트는 매우 간단하게 프로젝트를 설정할 수 있게하여 스프링 개발을 조금 더 쉽게 만들어주는 역할을 하고 있다.
 
-!https://user-images.githubusercontent.com/70622731/156905823-02f58d50-93b3-4df5-a09a-9ae99a92b45d.png
+<img width="1000" alt="1" src="https://github.com/chloe73/TIL/assets/50287759/03996696-c5e6-4f58-8625-e5294e08ec8f">
 
 ### 스프링부트는 스프링에 어떤점이 개선된걸까?
 
@@ -80,31 +80,31 @@ SpringBoot는 `spring-boot-starter`를 통해 의존성 관리를 더 편리하
 
 `spring-boot-starter-jpa` 의존성을 추가했을 때 `spring-aop`, `spring-jdbc`등의 의존성이 이미 안에 선언되어 있다.
 
-!https://user-images.githubusercontent.com/70622731/156871620-45bbc495-d399-4453-b90a-79377fec524e.png
+<img width="1000" alt="2" src="https://github.com/chloe73/TIL/assets/50287759/4e446609-d5f5-4728-b093-70e71866e010">
 
 `spring-boot-starter-jpa` 안으로 들어가 보면 이미 여러 의존성들이 정의되어 있어 starter만 정의하여도 쉽게 하위 의존성들을 관리할 수 있게된다.
 
-!https://user-images.githubusercontent.com/70622731/156871566-091dd031-b332-4f74-a390-3c82d3591256.png
+<img width="1000" alt="3" src="https://github.com/chloe73/TIL/assets/50287759/e031783c-497a-47de-a4d4-400a012567c4">
 
 그리고 의존성을 추가할 때 Spring에서는 버전을 개발자가 직접 명시해줬어야 했는데 SpringBoot는 버전을 명시할 필요없이 가장 적합한 버전을 설정해준다.
 
 maven인 경우 의존성들을 부모 자식관계로 관리하기 때문에 `spring-boot-stater-parent`를 통해 각 모듈의 현재 스프링부트 버전에 가장 적합한 버전을 제공해준다.
 
-!https://user-images.githubusercontent.com/70622731/156871732-abd5a8e2-b47e-4ebf-8bb4-bec3b6b177ef.png
+<img width="1000" alt="4" src="https://github.com/chloe73/TIL/assets/50287759/25d1db81-769d-49b7-8c39-e1de1faedc44">
 
 gradle인 경우는 `io.spring.dependency-management` 플러그인을 통해 각 모듈의 현재 스프링부트 버전에 가장 적합한 버전을 제공해준다.
 
-!https://user-images.githubusercontent.com/70622731/156871454-ff5ffb7c-4761-4670-9173-2d4ca7e27aa0.png
+<img width="1000" alt="5" src="https://github.com/chloe73/TIL/assets/50287759/0aab53f7-0e21-49d2-a05f-f980778a8697">
 
 ### 2. 자동설정
 
 기존의 스프링은 환경설정이 복잡하고 많은 설정을 했어야 했는데(db연결할때 datasource 설정을 매번 직접 bean을 생성했어야 했다.) 스프링부트에서는 이러한 환경설정을 @SpringBootApplication을 통해 자동설정을 해준다.
 
-!https://user-images.githubusercontent.com/70622731/156871833-67330d59-6f1d-4a85-abea-1ba2aa662263.png
+<img width="1000" alt="6" src="https://github.com/chloe73/TIL/assets/50287759/757e68e7-d3f8-449b-b016-ff42fbb9269f">
 
 @SpringBootApplication이 어떠한 역할을 하는지 알아보기 위해서 안으로 들어가보면
 
-!https://user-images.githubusercontent.com/70622731/156871862-9f1b9f09-1445-431d-a21c-a2c84f2f7461.png
+<img width="1000" alt="7" src="https://github.com/chloe73/TIL/assets/50287759/6c1e635e-0960-40c2-8109-68dc3c0ec499">
 
 위 그림과 같이 여러 어노테이션이 붙어있다.
 
@@ -134,7 +134,7 @@ SpringBoot는 Bean을 두 번에 걸쳐 등록한다.
 
 즉, SpringBoot는 Component scan을 통해서 모은 component들의 정보와 META-INF/spring.factories 파일에 사전 정의한 auto-configuration 내용에 의해 bean 생성을 진행한다.
 
-!https://user-images.githubusercontent.com/70622731/156872544-8ffef322-9cc5-42e3-8fff-0b1db4586e1a.png
+<img width="1000" alt="8" src="https://github.com/chloe73/TIL/assets/50287759/18b5e6d9-9f40-4c40-9275-58f52c4b6d7e">
 
 ### 3. 내장 WAS
 
@@ -142,7 +142,7 @@ SpringBoot는 Bean을 두 번에 걸쳐 등록한다.
 
 따라서 Spring으로 개발한 프로젝트를 배포하기 위해서는 웹어플리케이션이 압축된 war파일과 프로그램을 실행시킬 was가 필요했다.
 
-!https://user-images.githubusercontent.com/70622731/156872719-d24361b1-d159-4e30-a5d6-c6e7b7ce53b1.png
+<img width="1000" alt="9" src="https://github.com/chloe73/TIL/assets/50287759/9e86b3a6-1965-4d74-9ca5-a2bd4813f58e">
 
 war파일을 실행시킬 was를 직접 설정해주어야 한다.
 
